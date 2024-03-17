@@ -1,0 +1,109 @@
+
+
+
+###
+post http://localhost:4000/user-api/user
+Content-Type: application/json
+
+{
+    "userType":"user",
+    "username":"ravi234",
+    "password":"ravi",
+    "email":"ravi@gmail.com"
+}
+
+
+###
+get http://localhost:4000/user-api/articles
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhdmkyMzQiLCJpYXQiOjE3MDk5Njg5ODYsImV4cCI6MTcxMDI2ODk4Nn0.AlJCRRLhhs_i7_-NIyKKlJ0hMDyFUQedw440Bx2u-Mw
+
+###
+
+post http://localhost:4000/user-api/login
+Content-Type: application/json
+
+{
+    "username":"ravi234",
+    "password":"ravi"
+}
+
+
+###
+post http://localhost:4000/admin-api/adminNewUser
+Content-Type: application/json
+
+{
+     "userType":"admin",
+    "username":"ravikumar234",
+    "password":"ravi",
+    "email":"ravi2@gmail.com"
+}
+
+###
+post http://localhost:4000/admin-api/adminLogin
+Content-Type: application/json
+
+{
+     
+    "username":"ravikumar",
+    "password":"ravi"
+
+}
+
+###
+
+###
+post http://localhost:4000/author-api/authorNewUser
+Content-Type: application/json
+
+{
+     "userType":"admin",
+    "username":"ravikumar123",
+    "password":"ravi",
+    "email":"ravi2@gmail.com"
+}
+
+###
+post http://localhost:4000/author-api/authorLogin
+Content-Type: application/json
+
+{
+     
+    "username":"tara2",
+    "password":"1234"
+
+}
+
+
+###
+post http://localhost:4000/author-api/new-article
+Content-Type: application/json
+
+{
+    "articleId":"{{$timestamp}}",
+    "title":"How is this nice",
+    "author":"tara2",
+    "categor":"Technology great",
+    "content":"very nice 2345 juighgfgfc",
+    "dateOfCreation":"{{$datetime iso8601}}",
+    "dateOfModification":"{{$datetime iso8601}}",
+    "comments":[],
+    "status":true
+
+}
+
+###
+post http://localhost:4000/user-api/comments/1709052330
+Content-Type: application/json
+
+{
+    "comments":"nice well tried 23",
+    "username":"ravi"
+}
+
+
+###
+get http://localhost:4000/author-api/articles/tara2
+
+###
+DELETE  http://localhost:4000/admin-api/user
